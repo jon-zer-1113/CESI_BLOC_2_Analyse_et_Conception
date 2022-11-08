@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+    </style>
+</head>
+<body style="background-color:powderblue;">
+
+<h1> ATMOS METEO </h1>
+<hr>
+
+<input list="capteurs" name="capteurs">
+  <datalist id="capteurs">
+    <option value="Extérieur">
+    <option value="Congélateur">
+    <option value="Bureau">
+  </datalist>
+
+<h2>Liste des capteurs</h2>
+<ul>
+  <li>Extérieur</li>
+  <li>Congélateur</li>
+  <li>Bureau</li>
+</ul>
+
+{% for donnees in data %}
+<h2>Le numéro de capteur est {{ donnees['NUM_C'] }}.</h2>
+<table>
+  <tr>
+    <td>
+      <p>Température</p>
+      <p>{{ donnees['TEMP_R'] }} °C</p>
+    </td><td>
+      <p>Humidité</p>
+      <p>{{ donnees['HUM_R'] }} %</p>
+    </td><td>
+      <p>Niveau de batterie</p>
+      <p>{{ donnees['BATT_R'] }} V</p>
+    </td><td>
+      <p>Signal RSSI</p>
+      <p>{{ donnees['RSSI_R'] }} dBm</p>
+    </td>
+</table>
+{% endfor %}
+</body>
+</html>
