@@ -15,17 +15,17 @@
 
 - 🔭 Gestion du projet: ----->     **JIRA**
 
-- 💬 Modélisation BDD: ----->     **Merise (MCD, MLD, MPD), SQL, ...**
-
 - 🌱 Analyse du besoin: ----->     **Diagrammes, Rapport, ...**
 
 - 🤝 Gestion du code (Versioning): ----->     **GitHub (GIT)**
 
-- 📝 Restitution du projet: ----->     **PowerPoint, Rapport, ...**
+- 💬 Modélisation BDD: ----->     **Merise (MCD, MLD, MPD), SQL, ...**
 
 - 📫 Backend & serveur: ----->      **WAMP (ou MAMP), PyMySQL, API RESTful, Scripts, ...**
 
 - 👨‍💻 Frontend: ----->      **Flask, Html, Css, Bootstrap, ...**
+
+- 📝 Restitution du projet: ----->     **PowerPoint, Rapport, ...**
 
 <p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=jon-zer-1113&show_icons=true&locale=en" alt="jon-zer-1113" /></p>
 
