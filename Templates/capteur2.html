@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Capteur2</title>
+</head>
+<body>
+{% for donnees in data %}
+{% if donnees['NUM_C'] == '06182660' %}
+<h2>Le numéro de capteur est {{ donnees['NUM_C'] }}.</h2>
+<table>
+  <tr>
+    <td>
+      <p>Température</p>
+      <p>{{ donnees['TEMP_R'] }} °C</p>
+    </td><td>
+      <p>Humidité</p>
+      <p>{{ donnees['HUM_R'] }} %</p>
+    </td><td>
+      <p>Niveau de batterie</p>
+      <p>{{ donnees['BATT_R'] }} V</p>
+    </td><td>
+      <p>Signal RSSI</p>
+      <p>{{ donnees['RSSI_R'] }} dBm</p>
+    </td>
+</table>
+{% endif %}
+{% endfor %}
+</body>
+</html>

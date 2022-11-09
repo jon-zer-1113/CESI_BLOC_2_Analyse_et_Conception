@@ -14,44 +14,41 @@
           padding: 5px;
         }
     </style>
+    <style>
+        .conteneur{
+            display: flex;
+        }
+        .flex{
+            flex-grow: 1;
+        }
+    </style>
 </head>
-<body style="background-color:powderblue;">
 
-<h1> ATMOS METEO </h1>
-<hr>
+<body style="margin: 0px !important;">
+<header style="background-color:#1ABC9C;">
+    <div class="conteneur">
+        <div class="flex">
+            <h1 style="margin-top: 0px !important; margin-bottom: 0px !important;"> ATMOS</h1>
+        </div>
+        <div class="flex">Accueil</div>
+        <div class="flex">Plan</div>
+        <div class="flex">Mon compte</div>
+    </div>
 
-<input list="capteurs" name="capteurs">
-  <datalist id="capteurs">
-    <option value="Extérieur">
-    <option value="Congélateur">
-    <option value="Bureau">
-  </datalist>
+</header>
 
 <h2>Liste des capteurs</h2>
-<ul>
-  <li>Extérieur</li>
-  <li>Congélateur</li>
-  <li>Bureau</li>
-</ul>
 
-{% for donnees in data %}
-<h2>Le numéro de capteur est {{ donnees['NUM_C'] }}.</h2>
-<table>
-  <tr>
-    <td>
-      <p>Température</p>
-      <p>{{ donnees['TEMP_R'] }} °C</p>
-    </td><td>
-      <p>Humidité</p>
-      <p>{{ donnees['HUM_R'] }} %</p>
-    </td><td>
-      <p>Niveau de batterie</p>
-      <p>{{ donnees['BATT_R'] }} V</p>
-    </td><td>
-      <p>Signal RSSI</p>
-      <p>{{ donnees['RSSI_R'] }} dBm</p>
-    </td>
-</table>
-{% endfor %}
+<form action="/capteur1">
+  <input type="submit" id="capteur1" name="capteur1"  value="Extérieur">
+
+</form>
+<form action="/capteur2">
+  <input type="submit" id="capteur2" name="capteur2" value="Congélateur" >
+</form>
+<form action="/capteur3">
+    <input type="submit" value="Bureau" id="capteur3" name="capteur3" >
+</form>
+
 </body>
 </html>
