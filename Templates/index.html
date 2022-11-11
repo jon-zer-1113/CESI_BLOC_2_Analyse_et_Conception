@@ -2,18 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
-    <style>
-        table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
-        }
-        th, td {
-          padding: 5px;
-        }
-    </style>
+    <title>Bloc 2</title>
     <style>
         .conteneur{
             display: flex;
@@ -21,34 +10,93 @@
         .flex{
             flex-grow: 1;
         }
+        .text {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50em
+        }
+        .text2 {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50em;
+            text-align: center;
+            border: 0.5rem solid;
+            border-color:#1ABC9C;
+            margin-top: 50px
+        }
+        .footer {
+           position:absolute;
+           bottom:0;
+           width:100%;
+           height:40px;
+           text-align: center
+        }
+        .body {
+           margin:0;
+           padding:0;
+           text-align: center
+        }
     </style>
 </head>
 
-<body style="margin: 0px !important;">
+<body style="margin: 0px !important; background-color:#FFF6EA;", class="body">
+
 <header style="background-color:#1ABC9C;">
     <div class="conteneur">
         <div class="flex">
-            <h1 style="margin-top: 0px !important; margin-bottom: 0px !important;"> ATMOS</h1>
+            <p><h1 style="margin-top: 0px !important; margin-bottom: 0px !important;"> ATMOS</h1></p>
         </div>
-        <div class="flex">Accueil</div>
-        <div class="flex">Plan</div>
-        <div class="flex">Mon compte</div>
+        <div class="flex">
+            <a href="/">
+                <p>Accueil</p>
+            </a>
+        </div>
+        <div class="flex">
+            <p>Plan</p>
+        </div>
+        <div class="flex">
+            <p>Mon compte</p>
+        </div>
     </div>
-
 </header>
 
-<h2>Liste des capteurs</h2>
+<section class="text" style="margin-top: 120px !important;">
+    <h2>BIENVENUE SUR ATMOS - Stations météorologiques connectées !</h2>
+    <p>Cette application vous permet un accès aux températures et taux d’humidité de vos sondes personnelles.</p><br><br>
+    <div class="text2">
+        <p>-- Veuillez choisir un capteur --</p>
+        <form action="/capteur1">
+          <input type="submit" id="capteur1" name="capteur1"  value="Extérieur">
+        </form>
+        <form action="/capteur2">
+          <input type="submit" id="capteur2" name="capteur2" value="Congélateur" >
+        </form>
+        <form action="/capteur3">
+            <input type="submit" value="Bureau" id="capteur3" name="capteur3" >
+        </form>
+    </div>
+</section>
 
-<form action="/capteur1">
-  <input type="submit" id="capteur1" name="capteur1"  value="Extérieur">
-
-</form>
-<form action="/capteur2">
-  <input type="submit" id="capteur2" name="capteur2" value="Congélateur" >
-</form>
-<form action="/capteur3">
-    <input type="submit" value="Bureau" id="capteur3" name="capteur3" >
-</form>
-
+<footer style="background-color:#1ABC9C;"; class="footer">
+<div class="conteneur">
+    <div class="flex">http://127.0.0.1:8889</div>
+    <div class="flex">
+        <SCRIPT LANGUAGE="JavaScript">
+            var maintenant=new Date();
+            var jour=maintenant.getDate();
+            var mois=maintenant.getMonth()+1;
+            var an=maintenant.getFullYear();
+            document.write(jour,"/",mois,"/",an);
+        </SCRIPT>
+    </div>
+    <div class="flex">
+        <SCRIPT LANGUAGE="JavaScript">
+            var maintenant=new Date();
+            var heure=maintenant.getHours();
+            var minute=maintenant.getMinutes();
+            document.write(heure,":",minute);
+        </SCRIPT>
+    </div>
+</footer>
 </body>
 </html>
