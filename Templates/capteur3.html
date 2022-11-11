@@ -2,29 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Capteur3</title>
+    <title>Capteur1</title>
+      <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+    </style>
+      <style>
+        .conteneur{
+            display: flex;
+        }
+        .flex{
+            flex-grow: 1;
+        }
+        .text {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50em
+        }
+        .text2 {
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+            height:100px;
+            text-align: center;
+            border: 0.5rem solid;
+            border-color:#1ABC9C;
+            margin-top: 50px
+        }
+        .footer {
+           position:absolute;
+           bottom:0;
+           width:100%;
+           height:40px;
+        }
+        .body {
+           margin:0;
+           padding:0;
+           text-align: center
+        }
+    </style>
 </head>
-<body>
+<body style="margin: 0px !important; background-color:#FFF6EA;"; class="body">
+<header style="background-color:#1ABC9C;">
+    <div class="conteneur">
+        <div class="flex">
+            <h1 style="margin-top: 0px !important; margin-bottom: 0px !important;"> ATMOS</h1>
+        </div>
+        <div class="flex">
+            <a href="/">
+                <p>Accueil</p>
+            </a>
+        </div>
+        <div class="flex">
+            <p>Plan</p>
+        </div>
+        <div class="flex">
+            <p>Mon compte</p>
+        </div>
+    </div>
+
+</header>
+<section>
 {% for donnees in data %}
 {% if donnees['NUM_C'] == '06190484' %}
-<h2>Le numéro de capteur est {{ donnees['NUM_C'] }}.</h2>
-<table>
-  <tr>
-    <td>
-      <p>Température</p>
-      <p>{{ donnees['TEMP_R'] }} °C</p>
-    </td><td>
-      <p>Humidité</p>
-      <p>{{ donnees['HUM_R'] }} %</p>
-    </td><td>
-      <p>Niveau de batterie</p>
-      <p>{{ donnees['BATT_R'] }} V</p>
-    </td><td>
-      <p>Signal RSSI</p>
-      <p>{{ donnees['RSSI_R'] }} dBm</p>
-    </td>
-</table>
+<p style="margin-top: 80px !important;">Vous affichez la température et le taux d’humidité du capteur <big><big>BUREAU.</big></big></p>
+<div class="conteneur">
+    <div class="text2">
+        <td>
+              <p>Pictogramme</p>
+        </td>
+    </div>
+    <div class="text2">
+        <td>
+              <p>Température</p>
+              <h1>{{ donnees['TEMP_R'] }} °C</h1>
+        </td>
+    </div>
+    <div class="text2">
+        <td>
+              <p>Humidité</p>
+              <h1>None %</h1>
+        </td>
+    </div>
+</div>
 {% endif %}
 {% endfor %}
+</section>
+
+<footer style="background-color:#1ABC9C;"; class="footer">
+<div class="conteneur">
+    <div class="flex">http://127.0.0.1:8889</div>
+    <div class="flex">
+        <SCRIPT LANGUAGE="JavaScript">
+            var maintenant=new Date();
+            var jour=maintenant.getDate();
+            var mois=maintenant.getMonth()+1;
+            var an=maintenant.getFullYear();
+            document.write(jour,"/",mois,"/",an);
+        </SCRIPT>
+    </div>
+    <div class="flex">
+        <SCRIPT LANGUAGE="JavaScript">
+            var maintenant=new Date();
+            var heure=maintenant.getHours();
+            var minute=maintenant.getMinutes();
+            document.write(heure,":",minute);
+        </SCRIPT>
+    </div>
+</footer>
 </body>
 </html>
