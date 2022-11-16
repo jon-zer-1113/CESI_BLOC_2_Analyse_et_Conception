@@ -21,9 +21,9 @@
 
 - 💬 Modélisation BDD: ----->     **Merise (MCD, MLD, MPD), SQL, ...**
 
-- 📫 Backend & serveur: ----->      **WAMP (ou MAMP), PyMySQL, API RESTful, Scripts, ...**
+- 📫 Backend & serveur: ----->      **WAMP (ou MAMP), Flask, Python, PyMySQL, API RESTful, Scripts, ...**
 
-- 👨‍💻 Frontend: ----->      **Flask, Html, Css, Bootstrap, ...**
+- 👨‍💻 Frontend: ----->      **Html, Css, JavaScript ...**
 
 - 📝 Restitution du projet: ----->     **PowerPoint, Rapport, ...**
 
